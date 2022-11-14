@@ -1,0 +1,20 @@
+
+server:
+  port:  8081
+
+spring:
+  application:
+    name: course-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ${DB_USERNAME}
+    url: ${DB_URL}
+    password: ${DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming-strategy: org.hibernate.cfg.improvedNamingStrategy
+      ddl-auto: update
+    show-sql: 'true'
